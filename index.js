@@ -10,11 +10,11 @@ const productRoute = require("./Routes/productRoute");
 const blogRoute = require("./Routes/blogRoute");
 const categoryRoute = require("./Routes/productCategoryRoute");
 const blogCatRoute = require("./Routes/blogCatRoute");
-const brandRouter = require("./routes/brandRoute");
-const couponRouter = require("./routes/couponRoute");
-const colorRouter = require("./routes/colorRoute");
-const enqRouter = require("./routes/enqRoute");
-const uploadRouter = require("./Routes/uploadRoute");
+const brandRoute = require("./routes/brandRoute");
+const couponRoute = require("./routes/couponRoute");
+const colorRoute = require("./routes/colorRoute");
+const enqRoute = require("./routes/enqRoute");
+const uploadRoute = require("./Routes/uploadRoute");
 const uploadSeller = require("./Routes/sellerRoute");
 const cors = require("cors");
 
@@ -60,13 +60,13 @@ app.use("/api/product", productRoute);
 app.use("/api/blog", blogRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/blogcategory", blogCatRoute);
-app.use("/api/brand", brandRouter);
-app.use("/api/color", colorRouter);
-app.use("/api/enquriy", enqRouter);
-app.use("/api/upload", uploadRouter);
+app.use("/api/brand", brandRoute);
+app.use("/api/color", colorRoute);
+app.use("/api/enquriy", enqRoute);
+app.use("/api/upload", uploadRoute);
 app.use("/api/seller", uploadSeller);
 
-app.use("/api/coupon", couponRouter);
+app.use("/api/coupon", couponRoute);
 
 app.use(notFound);
 app.use(errorHandler);
