@@ -67,7 +67,12 @@ app.use("/api/upload", uploadRoute);
 app.use("/api/seller", uploadSeller);
 
 app.use("/api/coupon", couponRoute);
-
+app.get("/",(req,res)=>{
+  res.status(200).send({
+    "success":true,
+    "msg":"Node server running"
+  })
+})
 app.use(notFound);
 app.use(errorHandler);
 
